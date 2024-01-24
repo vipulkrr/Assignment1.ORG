@@ -98,8 +98,14 @@ limit 3;
 
 ---5. Date and Time Functions:---
 ---5.1. List orders placed in the last month.---
----5.2. Determine the oldest customer in terms of membership duration.---
+---5.2. Determine the oldest customer in terms of membership duration.---\
+SELECT * 
+FROM Orders
+ORDER BY OrderDate DESC limit  2;
 ---5.1.---unsolved---
+SELECT * FROM Orders
+WHERE YEAR(OrderDate)=2020 AND MONTH(OrderDate) >= 4;
+
 --5.2 ---
 SELECT *
 FROM Customers  
